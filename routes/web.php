@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +15,6 @@ use App\Http\Controllers\TestController;
 |
 */
 
-
-Route::get('/building/{room?}', function($room="建物です"){
-  return $room ;
-});
-
-Route::get('/building/{room}/{text?}',function($text='{room}'){
-  return "部屋番号は".$text."です";
-});
-
+Route::get('/', [TestController::class, 'index']);
+Route::post('/', [TestController::class, 'post']);
+Route::get('/verror', [TestController::class, 'verror']);
