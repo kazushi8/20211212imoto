@@ -14,22 +14,30 @@
       color:black;
       margin:50px 0px 50px 0px;
     }
-
+    header{
+      height:70px;
+    display: flex;
+    position: fixed;
+    width:100%;
+    padding: 0 30px;
+    }
       .content{
         text-align: center;
         background-color: gray;
       }
-      
-
     </style>
   </head>
   <body>
-    <div class="header">
-      @yield('header')
-    </div>
-    <h1>@yield('title')</h1>
-    <div class="content">
+    <header>
+      @include('includes.header')
+    </header>
+
+    <main>
       @yield('content')
-    </div>
+    </main>
+
+    <footer>
+      @include('includes.footer')
+    </footer>
   </body>
 </html>

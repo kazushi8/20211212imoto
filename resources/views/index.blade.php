@@ -12,17 +12,11 @@
     padding: 50px 60px;
   }
 
-@component('layouts.default')
-<ul>
-  <li>ホーム</li>
-  <li>日付一覧</li>
-  <li>ログアウト</li>
-  </ul>
-@endcomponent
 
-@section('title')
+
+
+@section('title','打刻ページ')
 <h1>さんお疲れ様です！</h1>
-@endsection
 
 @section('content')
 <table>
